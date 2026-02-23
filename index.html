@@ -1,91 +1,96 @@
 <!doctype html>
 <html lang="zh-CN">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
-  <title>广州南站 · 超深度研究站</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;800&family=Noto+Serif+SC:wght@500;700&display=swap" rel="stylesheet">
-  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"/>
+  <title>广州南站 · 超深度版 | 东东制作</title>
   <style>
-    :root{--bg:#070b14;--panel:#0d1324;--panel2:#121b31;--ink:#e6ecff;--muted:#95a3c9;--line:#223256;--acc:#61d9ff;--acc2:#a78bfa}
-    *{box-sizing:border-box} html,body{margin:0;background:radial-gradient(circle at 85% -10%,#1f2d5a80,transparent 33%),radial-gradient(circle at -5% 20%,#163f5180,transparent 30%),var(--bg);color:var(--ink);font-family:Manrope,"PingFang SC",sans-serif}
-    .shell{max-width:1400px;margin:0 auto;padding:14px}
-    .hero{padding:22px;border:1px solid var(--line);border-radius:22px;background:linear-gradient(150deg,#0f1730cc,#111b35cc);position:sticky;top:8px;z-index:5;backdrop-filter:blur(8px)}
-    .chip{display:inline-block;padding:7px 12px;border:1px solid #2a4377;border-radius:999px;font-size:12px;color:#9bcfff}
-    h1{font-family:"Noto Serif SC",serif;font-size:clamp(30px,5.5vw,62px);margin:10px 0 8px;line-height:1.06}
-    .desc{max-width:860px;color:var(--muted);font-size:15px;line-height:1.8}
-    .layout{display:grid;grid-template-columns:330px 1fr;gap:14px;margin-top:14px}
-    aside{position:sticky;top:150px;max-height:calc(100vh - 165px);overflow:auto;padding:12px;border:1px solid var(--line);background:linear-gradient(180deg,var(--panel),var(--panel2));border-radius:18px}
-    .toc-title{font-size:12px;letter-spacing:.1em;color:#8da4d8;margin:0 0 8px}
-    .l1,.l2,.l3{display:block;text-decoration:none;border-radius:10px;cursor:pointer}
-    .l1{padding:10px;background:#172342;color:#dce7ff;font-weight:700;margin:8px 0}
-    .l2{padding:8px 10px;margin:4px 0 4px 10px;color:#9fafe0;font-size:14px}
-    .l3{padding:6px 10px;margin:2px 0 2px 22px;color:#6fdcff;font-size:13px}
-    .l1:hover,.l2:hover,.l3:hover{background:#1f315d}
-    main{padding:24px;border-radius:18px;background:#0d1427;border:1px solid var(--line)}
-    article h2{font-size:30px;border-bottom:1px solid #20345d;padding-bottom:8px;margin:1.4em 0 .6em}
-    article h3{font-size:24px;margin:1.3em 0 .5em;color:#eaf2ff}
-    article h4{font-size:18px;margin:1.1em 0 .45em;color:#9de9ff}
-    article p,article li{line-height:1.95;color:#ccdaff;font-size:15px}
-    article blockquote{margin:1em 0;padding:10px 14px;border-left:3px solid var(--acc2);background:#121d38;border-radius:10px}
-    article pre{background:#050916;color:#b9ceff;padding:14px;border-radius:12px;overflow:auto;border:1px solid #1f3765}
-    footer{text-align:center;color:#7d8ebb;padding:18px}
-    .top{position:fixed;right:12px;bottom:12px;background:linear-gradient(90deg,var(--acc),var(--acc2));color:#071225;border:none;border-radius:999px;padding:10px 14px;font-weight:800;cursor:pointer}
-    @media (max-width:980px){.layout{grid-template-columns:1fr}.hero{position:relative;top:0}aside{position:relative;top:0;max-height:none}}
+    :root{--bg:#070b14;--panel:#0b1220;--card:#0f172a;--ink:#e5e7eb;--muted:#94a3b8;--line:#1f2a44;--c1:#22d3ee;--c2:#818cf8;--c3:#34d399}
+    *{box-sizing:border-box} html,body{margin:0}
+    body{font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif;color:var(--ink);background:radial-gradient(circle at 20% 0,#0d1b33 0,#070b14 38%,#05070d 100%)}
+    .noise:before{content:"";position:fixed;inset:0;pointer-events:none;opacity:.06;background-image:radial-gradient(#fff 0.6px,transparent 0.6px);background-size:3px 3px}
+    .top{position:sticky;top:0;z-index:100;background:rgba(5,10,20,.78);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+    .top .inner{max-width:1320px;margin:auto;padding:10px 14px;display:flex;gap:12px;align-items:center}
+    .logo{font-weight:800;padding:8px 12px;border:1px solid #1e293b;border-radius:999px;background:linear-gradient(90deg,#0b1325,#0f1f35)}
+    .menu{display:flex;gap:8px;overflow:auto;white-space:nowrap}
+    .menu a{color:#cbd5e1;text-decoration:none;border:1px solid #1f2a44;background:#0b1327;padding:7px 10px;border-radius:10px;font-size:12px}
+    .hero{max-width:1320px;margin:auto;padding:26px 14px 10px}
+    .title{font-size:clamp(32px,5.6vw,68px);line-height:1.04;margin:0;background:linear-gradient(90deg,var(--c1),var(--c2),var(--c3));-webkit-background-clip:text;background-clip:text;color:transparent}
+    .lead{color:var(--muted);max-width:980px;font-size:17px;line-height:1.8;margin-top:12px}
+    .chips{display:flex;gap:8px;flex-wrap:wrap;margin-top:12px}
+    .chip{font-size:12px;padding:6px 10px;border:1px solid #1f2a44;border-radius:999px;color:#cbd5e1;background:#0a1222}
+    .layout{max-width:1320px;margin:auto;padding:12px 14px;display:grid;grid-template-columns:290px 1fr;gap:16px}
+    .toc{position:sticky;top:62px;align-self:start;max-height:calc(100vh - 72px);overflow:auto;border:1px solid var(--line);border-radius:16px;background:linear-gradient(180deg,#0a1326,#0a1020);padding:12px}
+    .toc h3{margin:0 0 8px;font-size:13px;color:#93c5fd}
+    .l2,.l3,.l4{margin:4px 0}
+    .l2 a{color:#e2e8f0;text-decoration:none;font-size:13px}
+    .l3 a{color:#94a3b8;text-decoration:none;font-size:12px;padding-left:8px;display:block}
+    .l4 a{color:#64748b;text-decoration:none;font-size:11px;padding-left:18px;display:block}
+    .content{border:1px solid var(--line);border-radius:16px;background:linear-gradient(180deg,#0a1223,#0b1326);padding:18px}
+    .sec{padding:18px 2px;border-bottom:1px dashed #1f2a44}
+    .sec:last-child{border-bottom:none}
+    .h2{font-size:30px;margin:0 0 8px;color:#e2e8f0}
+    .h3{font-size:20px;margin:14px 0 8px;color:#67e8f9}
+    .h4{font-size:16px;margin:10px 0 6px;color:#a5b4fc}
+    p{margin:7px 0;line-height:1.92;color:#cbd5e1}
+    .foot{max-width:1320px;margin:14px auto 36px;padding:0 14px;color:#64748b;font-size:13px}
+    @media (max-width:980px){.layout{grid-template-columns:1fr}.toc{position:relative;top:0;max-height:none}}
   </style>
 </head>
-<body>
-  <div class="shell">
-    <section class="hero">
-      <span class="chip">东东制作 · WOW Deep</span>
-      <h1>广州南站：国家级枢纽、城市界面与增长引擎</h1>
-      <p class="desc">这是一个“长文可读、结构可跳、信息可追踪”的超深度网页。左侧提供三级菜单：一级=章节，二级=子议题，三级=快速洞察锚点（数据、机制、行动）。已针对 iPhone 阅读做排版适配。</p>
-    </section>
+<body class="noise">
+  <header class="top">
+    <div class="inner">
+      <div class="logo">东东制作</div>
+      <nav id="topMenu" class="menu"></nav>
+    </div>
+  </header>
 
-    <section class="layout">
-      <aside>
-        <div class="toc-title">三级菜单</div>
-        <div id="toc"></div>
-      </aside>
-      <main><article id="content"></article></main>
-    </section>
-    <footer>东东制作</footer>
-  </div>
-  <button class="top" onclick="window.scrollTo({top:0,behavior:'smooth'})">TOP</button>
+  <section class="hero">
+    <h1 class="title">广州南站 · 超深度交互研究</h1>
+    <p class="lead">面向“站点—网络—城市—产业”全链路，这是一版强调深度、可读性与移动端体验的长篇网页。内容结构按三级导航组织，支持快速跳转与持续阅读。</p>
+    <div class="chips"><span class="chip">三级菜单</span><span class="chip">超长内容</span><span class="chip">手机友好</span><span class="chip">高级暗色视觉</span></div>
+  </section>
+
+  <main class="layout">
+    <aside class="toc"><h3>三级目录</h3><div id="toc"></div></aside>
+    <article class="content" id="content"></article>
+  </main>
+  <footer class="foot">东东制作 · 广州南站专题（超深度版）</footer>
 
   <script>
-    const toc = document.getElementById('toc');
-    const content = document.getElementById('content');
+    async function boot(){
+      const md = await fetch('content.md').then(r=>r.text());
+      const lines = md.split(/\r?\n/);
+      const content = document.getElementById('content');
+      const toc = document.getElementById('toc');
+      const top = document.getElementById('topMenu');
+      let sec=null, h2i=0, h3i=0, h4i=0;
+      const cf=document.createDocumentFragment(), tf=document.createDocumentFragment();
 
-    function addLink(cls, id, text){ const a=document.createElement('a'); a.className=cls; a.href='#'+id; a.textContent=text; toc.appendChild(a); }
-
-    fetch('./content.md').then(r=>r.text()).then(md=>{
-      content.innerHTML = marked.parse(md);
-      const h3s=[...content.querySelectorAll('h3')];
-      h3s.forEach((h3,i)=>{
-        const l1='c'+i; h3.id=l1; addLink('l1',l1,h3.textContent);
-        let el=h3.nextElementSibling, sec=0;
-        while(el && el.tagName!=='H3'){
-          if(el.tagName==='H4'){
-            const l2=l1+'-'+sec++; el.id=l2; addLink('l2',l2,el.textContent);
-            // 第三级：为该二级标题后的前三段生成“洞察锚点”
-            let p=el.nextElementSibling, pIdx=0;
-            while(p && p.tagName!=='H4' && p.tagName!=='H3' && pIdx<3){
-              if(p.tagName==='P' && p.textContent.trim().length>40){
-                const l3=l2+'-p'+pIdx; p.id=l3;
-                const label=['洞察','数据','行动'][pIdx] || ('要点'+(pIdx+1));
-                addLink('l3',l3,label+' · '+p.textContent.trim().slice(0,14)+'…');
-                pIdx++;
-              }
-              p=p.nextElementSibling;
-            }
-          }
-          el=el.nextElementSibling;
+      for(const raw of lines){
+        const line = raw.trim(); if(!line) continue;
+        if(/^###\s+/.test(line)){
+          h2i++; h3i=0; const t=line.replace(/^###\s+/,'').trim(); const id='h2-'+h2i;
+          sec=document.createElement('section'); sec.className='sec'; sec.id=id;
+          const h=document.createElement('h2'); h.className='h2'; h.textContent=t; sec.appendChild(h); cf.appendChild(sec);
+          const d=document.createElement('div'); d.className='l2'; d.innerHTML=`<a href="#${id}">${t}</a>`; tf.appendChild(d);
+          const m=document.createElement('a'); m.href='#'+id; m.textContent=t; top.appendChild(m); continue;
         }
-      });
-    });
+        if(/^####\s+/.test(line) && sec){
+          h3i++; h4i=0; const t=line.replace(/^####\s+/,'').trim(); const h=document.createElement('h3'); h.className='h3'; h.textContent=t; sec.appendChild(h);
+          const d=document.createElement('div'); d.className='l3'; d.innerHTML=`<a href="#${sec.id}">· ${t}</a>`; tf.appendChild(d); continue;
+        }
+        if(/^#####\s+/.test(line) && sec){
+          h4i++; const t=line.replace(/^#####\s+/,'').trim(); const h=document.createElement('h4'); h.className='h4'; h.textContent=t; sec.appendChild(h);
+          const d=document.createElement('div'); d.className='l4'; d.innerHTML=`<a href="#${sec.id}">· ${t}</a>`; tf.appendChild(d); continue;
+        }
+        if(/^[-*]\s+/.test(line)){ const p=document.createElement('p'); p.textContent='• '+line.replace(/^[-*]\s+/,''); (sec||content).appendChild(p); continue; }
+        if(!/^```/.test(line) && !/^>/.test(line)){ const p=document.createElement('p'); p.textContent=line; (sec||content).appendChild(p); }
+      }
+      content.appendChild(cf); toc.appendChild(tf);
+      if(!top.children.length){ top.innerHTML='<a href="#content">阅读正文</a>'; }
+    }
+    boot();
   </script>
 </body>
 </html>
